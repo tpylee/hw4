@@ -25,7 +25,7 @@
         <ul class="navbar-nav ms-auto">
           <% if session[:user_id] %>
             <li class="nav-item">
-              <%= link_to "Logout", logout_path, method: :delete, class: "nav-link", data: { turbo: false } %>
+              <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
             </li>
           <% else %>
             <li class="nav-item">

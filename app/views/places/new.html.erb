@@ -1,6 +1,6 @@
 <h1>New Place</h1>
 
-<%= form_with(model: @place, local: true, html: { multipart: true }) do |form| %>
+<%= form_with(model: @place, local: true) do |form| %>
   <p>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -9,11 +9,6 @@
   <p>
     <%= form.label :description %>
     <%= form.text_area :description %>
-  </p>
-
-  <p>
-    <%= form.label :image %>
-    <%= form.file_field :image %>
   </p>
 
   <%= form.submit "Save", class: "btn btn-primary" %>
