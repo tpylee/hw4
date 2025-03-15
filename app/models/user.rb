@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  has_secure_password  # Enables password authentication using Bcrypt
+  has_secure_password
+  has_many :places
 end

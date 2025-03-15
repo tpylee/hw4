@@ -10,16 +10,18 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # gem "image_processing", ">= 1.2"
 # gem "aws-sdk-s3", require: false
 
+# ✅ Use SQLite in development & test environments
 group :development, :test do
+  gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
-group :development do
-  gem "sqlite3", "~> 1.4"
-  gem "tabulo"
-  gem "web-console"
-end
-
+# ✅ Use PostgreSQL for production (required for Render)
 group :production do
   gem "pg"
+end
+
+group :development do
+  gem "tabulo"
+  gem "web-console"
 end
